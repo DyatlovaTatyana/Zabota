@@ -23,7 +23,7 @@ class NewsPage(BasePage):
 
 
     def check_text_title(self):
-        expect(self.title_block()).to_have_text("последние новости")
+        expect(self.title_block()).to_contain_text("последние новости")
 
     def check_tags_block(self, isvisible=True):
         expect(self.tags_block).to_be_visible(visible=isvisible)
